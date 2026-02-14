@@ -1,0 +1,54 @@
+/* Bash Buddies — Avatar Styles */
+
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px;
+  border-radius: var(--radius-lg);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.avatar-clickable {
+  cursor: pointer;
+}
+
+.avatar-clickable:hover {
+  transform: translateY(-4px);
+  background-color: rgba(169, 234, 210, 0.3);
+}
+
+.avatar-clickable:focus-visible {
+  outline: 3px solid var(--ld-pop);
+  outline-offset: 4px;
+}
+
+.avatar-clickable:active {
+  transform: translateY(0);
+}
+
+.avatar-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.avatar-svg {
+  filter: drop-shadow(2px 2px 0 rgba(22, 24, 19, 0.2));
+}
+
+.avatar-name {
+  font-family: var(--font-headline);
+  font-size: 0.9rem;
+  color: var(--ld-ink);
+  text-align: center;
+}
+
+.avatar-tagline {
+  font-size: 0.7rem;
+  color: var(--ld-muted-green);
+  text-align: center;
+  max-width: 120px;
+  line-height: 1.2;
+}

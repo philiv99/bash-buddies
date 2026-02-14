@@ -1,0 +1,62 @@
+/* Bash Buddies — Auth Screen Styles */
+
+.auth-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+  background: linear-gradient(
+    135deg,
+    var(--ld-cream) 0%,
+    var(--ld-mint) 50%,
+    var(--ld-cream) 100%
+  );
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.auth-title {
+  font-family: var(--font-headline);
+  font-size: 2.5rem;
+  color: var(--ld-ink);
+  text-shadow: 3px 3px 0 var(--ld-mint);
+  margin-bottom: 4px;
+}
+
+.auth-subtitle {
+  font-size: 1.1rem;
+  color: var(--ld-muted-green);
+  margin-bottom: 24px;
+}
+
+.auth-form {
+  text-align: left;
+}
+
+.auth-error {
+  background-color: rgba(251, 43, 87, 0.1);
+  border: 2px solid var(--ld-pop);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  color: var(--ld-pop);
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.auth-submit {
+  width: 100%;
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--ld-muted-green);
+}

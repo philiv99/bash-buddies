@@ -1,0 +1,222 @@
+/* Bash Buddies — LinkittyDo Global CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+  /* Color palette */
+  --ld-cream: #FDEC92;
+  --ld-mint: #A9EAD2;
+  --ld-ink: #161813;
+  --ld-pop: #FB2B57;
+  --ld-paper: #EEEDE5;
+  --ld-muted-green: #5E6554;
+  --ld-muted-gold: #A29A61;
+  --ld-muted-peach: #E7A790;
+  --ld-white: #FFFFFF;
+
+  /* Typography */
+  --font-headline: 'Luckiest Guy', cursive;
+  --font-body: 'Nunito', sans-serif;
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Shadows */
+  --shadow-chunky: 4px 4px 0 var(--ld-ink);
+  --shadow-chunky-sm: 3px 3px 0 var(--ld-ink);
+  --shadow-soft: 0 2px 8px rgba(22, 24, 19, 0.15);
+
+  /* Borders */
+  --border-thick: 3px solid var(--ld-ink);
+  --border-medium: 2px solid var(--ld-ink);
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ld-ink);
+  background-color: var(--ld-cream);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headlines */
+h1, h2, h3 {
+  font-family: var(--font-headline);
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+/* Links */
+a {
+  color: var(--ld-pop);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--ld-pop);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility: Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Button base styles */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border: var(--border-thick);
+  border-radius: var(--radius-md);
+  padding: 12px 24px;
+  cursor: pointer;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 var(--ld-ink);
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ld-ink);
+}
+
+.btn-primary {
+  background-color: var(--ld-pop);
+  color: var(--ld-white);
+  box-shadow: var(--shadow-chunky);
+}
+
+.btn-secondary {
+  background-color: var(--ld-mint);
+  color: var(--ld-ink);
+  box-shadow: var(--shadow-chunky);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ld-pop);
+  border: none;
+  box-shadow: none;
+  text-decoration: underline;
+  min-height: auto;
+  padding: 8px 12px;
+}
+
+.btn-ghost:hover {
+  transform: none;
+  box-shadow: none;
+  color: var(--ld-ink);
+}
+
+/* Card base */
+.card {
+  background-color: var(--ld-paper);
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-chunky);
+  padding: 24px;
+}
+
+/* Input styles */
+.input-field {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background-color: var(--ld-white);
+  border: var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  width: 100%;
+  color: var(--ld-ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--ld-pop);
+  box-shadow: 0 0 0 3px rgba(251, 43, 87, 0.2);
+}
+
+.input-field::placeholder {
+  color: var(--ld-muted-green);
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Error text */
+.error-text {
+  color: var(--ld-pop);
+  font-size: 0.875rem;
+  font-weight: 600;
+}

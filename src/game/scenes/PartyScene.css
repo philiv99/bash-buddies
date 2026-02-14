@@ -1,0 +1,115 @@
+/* Bash Buddies — Party Scene Styles */
+
+.party-scene {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px 24px 32px;
+}
+
+.party-status {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+
+.party-status-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--ld-paper);
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 8px 20px;
+  box-shadow: var(--shadow-chunky-sm);
+}
+
+.status-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ld-muted-green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.status-value {
+  font-family: var(--font-headline);
+  font-size: 1.4rem;
+  color: var(--ld-pop);
+}
+
+.party-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.party-header h2 {
+  font-family: var(--font-headline);
+  font-size: 1.8rem;
+  color: var(--ld-ink);
+}
+
+.party-instruction {
+  color: var(--ld-muted-green);
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+.party-guests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  justify-items: center;
+}
+
+.party-guest-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.guest-talked-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ld-muted-green);
+  margin-top: -4px;
+}
+
+/* Game over overlay */
+.party-game-over {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(22, 24, 19, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.party-game-over-card {
+  text-align: center;
+  max-width: 380px;
+}
+
+.party-game-over-card h3 {
+  font-family: var(--font-headline);
+  font-size: 1.8rem;
+  color: var(--ld-pop);
+  margin-bottom: 12px;
+}
+
+.party-game-over-card p {
+  margin-bottom: 8px;
+  color: var(--ld-ink);
+}
+
+.party-game-over-card .btn {
+  margin-top: 16px;
+}
+
+@media (max-width: 480px) {
+  .party-guests-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,49 @@
+/* Bash Buddies — Layout Styles */
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background-color: var(--ld-mint);
+  border-bottom: var(--border-thick);
+  box-shadow: 0 3px 0 var(--ld-ink);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-title {
+  font-family: var(--font-headline);
+  font-size: 1.4rem;
+  color: var(--ld-ink);
+  letter-spacing: 1px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-player {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ld-ink);
+}
+
+.header-logout {
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  min-height: auto;
+}
+
+.app-main {
+  flex: 1;
+}

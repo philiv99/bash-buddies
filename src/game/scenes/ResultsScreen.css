@@ -1,0 +1,99 @@
+/* Bash Buddies — Results Screen Styles */
+
+.results-screen {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px 24px;
+  min-height: calc(100vh - 80px);
+}
+
+.results-card {
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+}
+
+.results-title {
+  font-family: var(--font-headline);
+  font-size: 2.5rem;
+  color: var(--ld-pop);
+  text-shadow: 3px 3px 0 var(--ld-mint);
+  margin-bottom: 8px;
+}
+
+.results-subtitle {
+  font-size: 1.1rem;
+  color: var(--ld-ink);
+  margin-bottom: 24px;
+}
+
+.results-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.results-score-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ld-muted-green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.results-score-value {
+  font-family: var(--font-headline);
+  font-size: 3rem;
+  color: var(--ld-pop);
+}
+
+.results-friends,
+.results-passed {
+  margin-bottom: 24px;
+}
+
+.results-friends-title,
+.results-passed-title {
+  font-family: var(--font-headline);
+  font-size: 1.2rem;
+  color: var(--ld-ink);
+  margin-bottom: 12px;
+}
+
+.results-friends-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.results-friend-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.results-friend-item.faded {
+  opacity: 0.5;
+}
+
+.results-friend-points {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ld-mint);
+  background-color: var(--ld-ink);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.results-actions {
+  margin-top: 16px;
+}
+
+.results-actions .btn {
+  font-size: 1.2rem;
+  padding: 14px 36px;
+}

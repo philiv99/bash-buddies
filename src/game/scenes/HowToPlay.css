@@ -1,0 +1,68 @@
+/* Bash Buddies — How to Play Styles */
+
+.htp-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(22, 24, 19, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 24px;
+}
+
+.htp-card {
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.htp-title {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  color: var(--ld-pop);
+  margin-bottom: 24px;
+}
+
+.htp-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.htp-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.htp-step-num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--ld-mint);
+  border: 2px solid var(--ld-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-headline);
+  font-size: 1.1rem;
+  color: var(--ld-ink);
+}
+
+.htp-step strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 1rem;
+}
+
+.htp-step p {
+  font-size: 0.9rem;
+  color: var(--ld-muted-green);
+  line-height: 1.4;
+}
